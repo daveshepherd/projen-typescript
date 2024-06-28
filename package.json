@@ -37,6 +37,9 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.5.2"
   },
+  "peerDependencies": {
+    "projen": "^0.82.8"
+  },
   "main": "lib/index.js",
   "license": "Apache-2.0",
   "publishConfig": {
