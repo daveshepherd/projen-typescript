@@ -9,6 +9,7 @@
     ".projen/deps.json",
     ".projen/files.json",
     ".projen/tasks.json",
+    "CODEOWNERS",
     "LICENSE",
     "tsconfig.dev.json",
     "tsconfig.json"

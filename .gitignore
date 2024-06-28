@@ -44,5 +44,6 @@ junit.xml
 /lib
 /dist/
 !/.eslintrc.json
+!/CODEOWNERS
 !/.circleci/config.yml
 !/.projenrc.ts

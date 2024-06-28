@@ -1,5 +1,6 @@
 import { typescript } from 'projen';
 import { NpmCircleCi } from './circleci';
+import { CodeOwners, CodeOwnersOptions } from './codeowners';
 import { mergeOptions } from './utils/merge-options';
 
 type TypeScriptProjectOptionsCustom = Omit<
@@ -8,6 +9,10 @@ typescript.TypeScriptProjectOptions,
 >;
 
 export interface NpmPackageOptions extends TypeScriptProjectOptionsCustom {
+  /**
+   * Options used to generate the CODEOWNERS file
+   */
+  codeOwnersOptions: CodeOwnersOptions;
   /**
    * The default release branch for this project.
    * @defaultValue "main"
@@ -60,6 +65,7 @@ export class NpmPackage extends typescript.TypeScriptProject {
       ...mergedOptions,
     });
 
+    new CodeOwners(this, mergedOptions.codeOwnersOptions);
     new NpmCircleCi(this);
   }
 }
