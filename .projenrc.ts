@@ -7,7 +7,7 @@ const project = new typescript.TypeScriptProject({
   githubOptions: {
     workflows: false,
   },
-
+  gitignore: ['.npmrc', '.vscode'],
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
@@ -37,10 +37,8 @@ new circleci.Circleci(project, {
         {
           run: {
             name: 'Find mutations',
-            command: `
-git add .
-git diff --staged --patch --exit-code > .repo.patch || echo "export SELF_MUTATION_HAPPENED=true" >> $BASH_ENV
-            `,
+            command: `git add .
+git diff --staged --patch --exit-code > .repo.patch || echo "export SELF_MUTATION_HAPPENED=true" >> $BASH_ENV`,
           },
         },
       ],

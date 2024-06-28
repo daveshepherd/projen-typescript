@@ -17,13 +17,9 @@ jobs:
           command: npx projen build
       - run:
           name: Find mutations
-          command: "
-
+          command: |-
             git add .
-
-            git diff --staged --patch --exit-code > .repo.patch || echo \"export SELF_MUTATION_HAPPENED=true\" >> $BASH_ENV
-
-            \            "
+            git diff --staged --patch --exit-code > .repo.patch || echo "export SELF_MUTATION_HAPPENED=true" >> $BASH_ENV
 workflows:
   build:
     jobs:
