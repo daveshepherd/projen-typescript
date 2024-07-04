@@ -1,8 +1,10 @@
-import { NpmPackage } from './src/npm';
+import { NpmPackage } from 'projen-jsii';
 
 const project = new NpmPackage({
+  codeOwners: ['sabre'],
+  defaultReleaseBranch: 'main',
   name: 'projen-modules',
-  codeOwnersOptions: { owners: ['sabre'] },
+  devDeps: ['file:../projen-jsii'],
 });
 
 project.synth();

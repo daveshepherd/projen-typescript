@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`CodeOwners matches the snapshot 1`] = `"* @unibuddy/sabre"`;
