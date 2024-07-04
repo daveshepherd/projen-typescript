@@ -38,10 +38,6 @@
       "type": "build"
     },
     {
-      "name": "file:../projen-jsii",
-      "type": "build"
-    },
-    {
       "name": "jest",
       "type": "build"
     },
@@ -52,6 +48,11 @@
     },
     {
       "name": "projen",
+      "type": "build"
+    },
+    {
+      "name": "projen-modules",
+      "version": "^0.0.8",
       "type": "build"
     },
     {

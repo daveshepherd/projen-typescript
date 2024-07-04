@@ -4,7 +4,7 @@ const project = new NpmPackage({
   codeOwners: ['sabre'],
   defaultReleaseBranch: 'main',
   name: 'projen-modules',
-  devDeps: ['file:../projen-modules'],
+  devDeps: ['projen-modules@^0.0.8'],
 });
 
 project.synth();
