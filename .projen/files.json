@@ -11,6 +11,7 @@
     ".projen/tasks.json",
     "CODEOWNERS",
     "LICENSE",
+    "README.md",
     "tsconfig.dev.json",
     "tsconfig.json"
   ],

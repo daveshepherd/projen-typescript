@@ -56,7 +56,6 @@
     },
     {
       "name": "projen-modules",
-      "version": "^0.0.11",
       "type": "build"
     },
     {
